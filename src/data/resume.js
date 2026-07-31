@@ -183,10 +183,33 @@ export const skills = [
   },
 ]
 
+// The draggable cloud in the skills section. `group` must match a `skills` group name —
+// selecting a tag highlights the card it belongs to, and every group needs a way in.
+// `dense: true` drops out on phones, where the sphere is too small to hold 22 labels
+// without them piling up; what is left still covers all six groups.
 export const orbitSkills = [
-  'Haskell', 'GHC', 'Nix', 'PureScript', 'Kotlin', 'Python',
-  'React', 'Redis', 'Postgres', 'Docker', 'Servant', 'MySQL',
-  'Android', 'JavaScript', 'Linux', 'AWS', 'MongoDB', 'NodeJS',
+  { label: 'Haskell', group: 'Languages' },
+  { label: 'PureScript', group: 'Languages' },
+  { label: 'Kotlin', group: 'Languages' },
+  { label: 'Python', group: 'Languages', dense: true },
+  { label: 'JavaScript', group: 'Languages', dense: true },
+  { label: 'GHC', group: 'Compilers & Build' },
+  { label: 'Nix', group: 'Compilers & Build' },
+  { label: 'Servant', group: 'Backend & Data' },
+  { label: 'Postgres', group: 'Backend & Data' },
+  { label: 'Redis', group: 'Backend & Data' },
+  { label: 'MySQL', group: 'Backend & Data', dense: true },
+  { label: 'MongoDB', group: 'Backend & Data', dense: true },
+  { label: 'NodeJS', group: 'Backend & Data', dense: true },
+  { label: 'React', group: 'Frontend & Mobile' },
+  { label: 'Android', group: 'Frontend & Mobile' },
+  { label: 'NextJS', group: 'Frontend & Mobile', dense: true },
+  { label: 'Docker', group: 'Tooling' },
+  { label: 'Linux', group: 'Tooling' },
+  { label: 'AWS', group: 'Tooling', dense: true },
+  { label: 'Git', group: 'Tooling', dense: true },
+  { label: 'Payments', group: 'Domain' },
+  { label: 'Cryptography', group: 'Domain' },
 ]
 
 export const projects = [

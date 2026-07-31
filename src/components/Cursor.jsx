@@ -18,7 +18,9 @@ export default function Cursor() {
       if (dot.current) {
         dot.current.style.transform = `translate(${pos.x - 3}px, ${pos.y - 3}px)`
       }
-      const interactive = e.target.closest('a, button, .tilt, .chip')
+      // .orbit-stage included so the ring opens over the whole skill cloud, not just its
+      // tags — with the page cursor hidden, that ring is the only "this is grabbable" cue.
+      const interactive = e.target.closest('a, button, .tilt, .chip, .orbit-stage')
       ring.current?.classList.toggle('active', !!interactive)
     }
 
